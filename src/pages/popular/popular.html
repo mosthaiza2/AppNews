@@ -1,0 +1,25 @@
+<!--
+  Generated template for the PopularPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>popular</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let news of popnews"> 
+      <ion-thumbnail item-start>
+        <img [src]="news.data.thumbnail" alt="">
+      </ion-thumbnail>
+      <h2>{{news.data.title}}</h2>
+      <p>{{news.data.author}}</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
